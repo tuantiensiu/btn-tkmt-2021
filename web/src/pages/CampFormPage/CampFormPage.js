@@ -41,9 +41,9 @@ const FORM_MODELS = {
     { value: 'lt3', title: 'Dưới 3 tháng' },
   ],
   paymentLevel: {
-    lt3: [{ value: '100000', title: 'Chi phí trại viên|100.000đ' }],
+    lt3: [{ value: '50000', title: 'Chi phí trại viên|50.000đ' }],
     gt3: [
-      { value: '100000', title: 'Chi phí trại viên|100.000đ' },
+      { value: '50000', title: 'Chi phí trại viên|50.000đ' },
       // { value: '1100000', title: 'Thu nhập 3-5 triệu|1.100.000đ' },
       // { value: '1300000', title: 'Thu nhập trên 5-7 triệu|1.300.000đ' },
       // { value: '1500000', title: 'Thu nhập trên 7 triệu|1.500.000đ' },
@@ -51,9 +51,9 @@ const FORM_MODELS = {
   },
   paymentMethod: [
     { value: 'BANK', title: 'Chuyển khoản trực tiếp cho thủ quỹ' },
-    // { value: 'GROUP_LEADER', title: 'Nộp tiền mặt trực tiếp cho nhóm trưởng' },
+    { value: 'GROUP_LEADER', title: 'Đóng nhóm trưởng' },
     //{ value: 'MANAGER', title: 'Nộp tiền mặt trực tiếp cho thủ quỹ' },
-    { value: 'MOMO', title: 'Chuyển tiền qua MOMO' },
+    { value: 'MOMO', title: 'Chuyển qua MOMO' },
   ],
   paymentStage: [
     { value: 'FULL', title: 'Đóng đủ một lần' },
@@ -80,7 +80,7 @@ export default function FormPage() {
     group: 1,
     joinAge: 'gt3',
     gender: 'MALE',
-    paymentLevel: '100000',
+    paymentLevel: '50000',
     offering: 0,
     paymentMethod: 'BANK',
     paymentStage: 'FULL',
@@ -156,7 +156,7 @@ export default function FormPage() {
               </h2>
               <ul className="mt-4 text-lg">
                 <li className="mt-2">
-                  * Nhận đăng ký và hoàn tất lệ phí: 20/09/2021 - 10/10/2021
+                  * Nhận đăng ký và hoàn tất lệ phí: 26/09/2021 - 03/10/2021
                 </li>
               </ul>
               <h2 className="mt-4 text-lg font-semibold">
