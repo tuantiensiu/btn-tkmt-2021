@@ -41,9 +41,9 @@ const FORM_MODELS = {
     { value: 'lt3', title: 'Dưới 3 tháng' },
   ],
   paymentLevel: {
-    lt3: [{ value: '515000', title: 'Chi phí trại viên|515.000đ' }],
+    lt3: [{ value: '100000', title: 'Chi phí trại viên|100.000đ' }],
     gt3: [
-      { value: '515000', title: 'Chi phí trại viên|515.000đ' },
+      { value: '100000', title: 'Chi phí trại viên|100.000đ' },
       // { value: '1100000', title: 'Thu nhập 3-5 triệu|1.100.000đ' },
       // { value: '1300000', title: 'Thu nhập trên 5-7 triệu|1.300.000đ' },
       // { value: '1500000', title: 'Thu nhập trên 7 triệu|1.500.000đ' },
@@ -51,8 +51,9 @@ const FORM_MODELS = {
   },
   paymentMethod: [
     { value: 'BANK', title: 'Chuyển khoản trực tiếp cho thủ quỹ' },
-    { value: 'GROUP_LEADER', title: 'Nộp tiền mặt trực tiếp cho nhóm trưởng' },
-    { value: 'MANAGER', title: 'Nộp tiền mặt trực tiếp cho thủ quỹ' },
+    // { value: 'GROUP_LEADER', title: 'Nộp tiền mặt trực tiếp cho nhóm trưởng' },
+    //{ value: 'MANAGER', title: 'Nộp tiền mặt trực tiếp cho thủ quỹ' },
+    { value: 'MOMO', title: 'Chuyển tiền qua MOMO' },
   ],
   paymentStage: [
     { value: 'FULL', title: 'Đóng đủ một lần' },
@@ -79,7 +80,7 @@ export default function FormPage() {
     group: 1,
     joinAge: 'gt3',
     gender: 'MALE',
-    paymentLevel: '515000',
+    paymentLevel: '100000',
     offering: 0,
     paymentMethod: 'BANK',
     paymentStage: 'FULL',
@@ -146,7 +147,7 @@ export default function FormPage() {
       <div className="gap-4 h-auto p-4 md:p-8 min-w-full max-w-md mx-auto">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl md:text-3xl lg font-bold uppercase">
-            Phiếu Đăng Ký Trại LINK 30/4
+            FORM ĐĂNG KÝ TRẠI THÁNH KINH MÙA THU 2021
           </h1>
           <div>
             <div className="bg-gray-700 mt-8 p-4 text-white rounded">
@@ -155,17 +156,17 @@ export default function FormPage() {
               </h2>
               <ul className="mt-4 text-lg">
                 <li className="mt-2">
-                  * Nhận đăng ký và hoàn tất lệ phí: 04/04/2020 - 18/04/2020
+                  * Nhận đăng ký và hoàn tất lệ phí: 04/04/2021 - 18/04/2021
                 </li>
               </ul>
               <h2 className="mt-4 text-lg font-semibold">
-                <em>Thời gian & Địa điểm</em>
+                <em>Thời gian </em>
               </h2>
               <ul className="mt-4 text-lg">
-                <li className="mt-2">* 6h sáng 30/4 - 17h chiều 1/5</li>
                 <li className="mt-2">
-                  * Khu du lịch Thảo Thiện Garden - Đồng Nai
+                  * 19h00 từ ngày 11/10/2021 - 16/10/2021
                 </li>
+                <li className="mt-2">* Online qua Zoom</li>
               </ul>
             </div>
             <div className="mt-8">
@@ -179,10 +180,10 @@ export default function FormPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div>
               <h3 className="text-lg font-semibold">Thông tin cá nhân</h3>
-              <span className="text-gray-500 text-opacity-75">
+              {/* <span className="text-gray-500 text-opacity-75">
                 Bao gồm các thông tin cơ bản về bạn để BTC đăng ký thủ tục xe,
                 lều trại, chia lều...
-              </span>
+              </span> */}
             </div>
             <div className="">
               <div className="flex flex-col">
@@ -196,7 +197,6 @@ export default function FormPage() {
                 <TextField
                   name="fullName"
                   className="input h-14 rounded text-2xl p-4 mt-2 bg-gray-300"
-                  errorClassName="input error"
                   type="text"
                   placeholder="Nguyễn Văn A"
                   validation={{ required: true }}
@@ -206,7 +206,7 @@ export default function FormPage() {
               <div className="flex flex-col mt-8">
                 <Label
                   name="nationalId"
-                  className="text-lg"
+                  className="label text-lg"
                   errorClassName="label text-lg error"
                 >
                   Số CMND
