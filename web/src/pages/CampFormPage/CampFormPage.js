@@ -164,7 +164,8 @@ export default function FormPage() {
               </h2>
               <ul className="mt-4 text-lg">
                 <li className="mt-2">
-                  * 19h00 từ ngày 11/10/2021 - 16/10/2021
+                  * 19h00 các buổi tối từ thứ 2 - thứ 7 (11/10/2021 -
+                  16/10/2021)
                 </li>
                 <li className="mt-2">* Online qua Zoom</li>
               </ul>
