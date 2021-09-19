@@ -156,7 +156,7 @@ export default function FormPage() {
               </h2>
               <ul className="mt-4 text-lg">
                 <li className="mt-2">
-                  * Nhận đăng ký và hoàn tất lệ phí: 04/04/2021 - 18/04/2021
+                  * Nhận đăng ký và hoàn tất lệ phí: 20/09/2021 - 10/10/2021
                 </li>
               </ul>
               <h2 className="mt-4 text-lg font-semibold">
